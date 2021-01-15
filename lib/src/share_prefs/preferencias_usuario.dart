@@ -41,6 +41,15 @@ class PreferenciasUsuario {
   set nombreUsuario(String value){
     _prefs.setString('nombreUsuario', value);
   }
+
+  //estos getters y setter seran para la ultim apagina abierta del dispositivo
+  get ultimaPagina {
+    return _prefs.getString('ultimaPagina') ?? 'home';
+  }
+
+  set ultimaPagina(String value){
+    _prefs.setString('ultimaPagina', value);
+  }
   //Ninguna de estas propiedades se van a usar
   /* bool _colorSecundario;
   int _genero;

@@ -14,7 +14,7 @@ class _SettingsPageState extends State<SettingsPage> {
 
   bool _colorSecundario;
   int _genero;
-  String nombre = 'Pedro';
+  String nombre;
 
   TextEditingController _textController;
 
@@ -23,6 +23,7 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   void initState(){
     super.initState();
+    prefs.ultimaPagina = SettingsPage.routeName;
     _genero = prefs.genero;
     _colorSecundario = prefs.colorSecundario;
     _textController = new TextEditingController(text: prefs.nombreUsuario);
